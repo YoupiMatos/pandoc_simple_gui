@@ -4,6 +4,7 @@ GUI pour pandoc, outil cli qui permet de convertir des documents dans beaucoup d
 
 ## Configuration
 Il vous faut pandoc sur votre poste pour que cette appli fonctionne, téléchargez la sur https://pandoc.org
+
 Pour convertir vers le format pdf, il vous faut pdflatex, c'est à dire qu'il vous faut télécharger une distribution MiKTeX, proTeXt ou TeX Live par exemple.
 
 ## Installation
