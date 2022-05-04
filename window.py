@@ -1,21 +1,23 @@
+from json import tool
 import PySimpleGUI as psg
 
 file_list_column = [
         psg.Text("Document à convertir"),
-        psg.In(size=(25, 1), enable_events=True, key="input_file"),
+        psg.In("Document...",size=(25, 1), enable_events=True, key="input_file"),
         psg.FileBrowse(),
 
 ]
 
 outputFolder = [
         psg.Text("Dossier de sortie"),
-        psg.In("dossier de sortie...", size=(25, 1), enable_events=True, key="output_folder", ),
+        psg.In("Dossier de sortie...", size=(25, 1), enable_events=True, key="output_folder", ),
         psg.FolderBrowse()
 ]
 
 converted_filename = [
         psg.Text("Nom du fichier converti"),
-        psg.Input('fichier de sortie', size=(25,1), enable_events=True, key="name")
+        psg.Text("ℹ️", tooltip='Renseignez le nom du fichier de sortie, avec son extension. Pandoc convertira directement vers cette extension. Exemple: "monfichier.pdf"'),
+        psg.Input('exemple.doc', size=(25,1), enable_events=True, key="name")
 ]
 
 confirm_button = [

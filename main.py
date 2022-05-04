@@ -34,8 +34,8 @@ def run(cmd):
 
 def convert(entry_file: str, output_folder: str, name: str):
     entry_file = '"' + entry_file + '"' 
-    output_folder = '"' + output_folder + '/' 
-    name =  name + '"' 
+    output_folder = '"' + output_folder + '/'
+    name =  name.strip() + '"' 
 
     print(entry_file)
     print(output_folder)
@@ -47,8 +47,9 @@ def convert(entry_file: str, output_folder: str, name: str):
 def getResult(result: subprocess.CompletedProcess):
     if result.returncode == 0:
         pass
+
 input_formats = getInputFormats()
-output_formats = getOutputFormats()
+output_formats =getOutputFormats()
 while True:     #Main event loop
     window['input_format_list'].update(values=input_formats)
     window['output_format_list'].update(values=output_formats)
